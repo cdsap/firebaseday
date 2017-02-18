@@ -4,7 +4,7 @@ dependencies:
   override:
     - echo y | android update sdk --no-ui --all --filter "android-25,build-tools-25.0.2"
     - echo y | android update sdk --no-ui --all --filter "extra-android-m2repository"
-    - echo $circle | base64 --decode > ${HOME}/client-secret.json
+    - echo $CIRCLE | base64 --decode > ${HOME}/client-secret.json
     - sudo /opt/google-cloud-sdk/bin/gcloud config set project $PROJECT_ID
     - sudo /opt/google-cloud-sdk/bin/gcloud --quiet components update
     - sudo /opt/google-cloud-sdk/bin/gcloud --quiet components install beta
