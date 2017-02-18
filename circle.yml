@@ -1,4 +1,4 @@
-ependencies:
+dependencies:
   pre:
     - sudo pip install -U crcmod
   override:
