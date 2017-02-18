@@ -1,9 +1,15 @@
 package com.farang.firebaseday.domain.usecases;
 
 
-public class GetCard {
+import com.farangbank.firebaseday.entities.Card;
 
-    List<Card> getCards();
+import java.util.List;
 
-    Card getCard(long id);
+import io.reactivex.Observable;
+
+public interface GetCard {
+
+    Observable<List<Card>> getCards();
+
+    Observable<Card> getCard(long id);
 }

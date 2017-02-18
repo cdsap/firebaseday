@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "402502575964",
+    "firebase_url": "https://fir-day-7560b.firebaseio.com",
+    "project_id": "fir-day-7560b",
+    "storage_bucket": "fir-day-7560b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:402502575964:android:4bcc9bf9fb32213c",
+        "android_client_info": {
+          "package_name": "com.farangbank.firebaseday"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "402502575964-a9jhal10dqac9uirfpfmikcv90a8n49j.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.farangbank.firebaseday",
+            "certificate_hash": "C064F1BE88DD4E78B3C7ECB5E64B220BDE1ACB95"
+          }
+        },
+        {
+          "client_id": "402502575964-4od144roveta6j0o57ublde7n5jg51d4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCos-kpavfLs_zTzNA0ePaTmfuPUQqM5O4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "402502575964-4od144roveta6j0o57ublde7n5jg51d4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

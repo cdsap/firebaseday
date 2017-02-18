@@ -1,71 +1,28 @@
 package com.farangbank.firebaseday.entities;
 
-public class Account {
+import com.google.auto.value.AutoValue;
 
-    private long id;
-    private String accountName;
-    private AccountType accountType;
-    private Currency mainCurrency;
-    private double balance;
-    private boolean active;
-    private long userId;
+@AutoValue
+public abstract class Account {
 
-    public Account() {
-    }
+    public abstract long id();
 
-    public long getId() {
-        return id;
-    }
+    public abstract String accountName();
 
-    public void setId(long id) {
-        this.id = id;
-    }
+    public abstract AccountType accountType();
 
-    public String getAccountName() {
-        return accountName;
-    }
+    public abstract Currency mainCurrency();
 
-    public void setAccountName(String accountName) {
-        this.accountName = accountName;
-    }
+    public abstract double balance();
 
-    public AccountType getAccountType() {
-        return accountType;
-    }
+    public abstract boolean active();
 
-    public void setAccountType(AccountType accountType) {
-        this.accountType = accountType;
-    }
+    public abstract long userId();
 
-    public Currency getMainCurrency() {
-        return mainCurrency;
-    }
-
-    public void setMainCurrency(Currency mainCurrency) {
-        this.mainCurrency = mainCurrency;
-    }
-
-    public double getBalance() {
-        return balance;
-    }
-
-    public void setBalance(double balance) {
-        this.balance = balance;
-    }
-
-    public boolean isActive() {
-        return active;
-    }
-
-    public void setActive(boolean active) {
-        this.active = active;
-    }
-
-    public long getUserId() {
-        return userId;
-    }
-
-    public void setUserId(long userId) {
-        this.userId = userId;
+    public static Account createAccount(long id, String name,
+                                        AccountType accountType, Currency currency,
+                                        double balance, boolean active, long userId) {
+        return new AutoValue_Account(id, name, accountType,
+                currency, balance, active, userId);
     }
 }
