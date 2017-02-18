@@ -2,7 +2,7 @@ ependencies:
   pre:
     - sudo pip install -U crcmod
   override:
-    - echo y | android update sdk --no-ui --all --filter "android-24,build-tools-24.0.2"
+    - echo y | android update sdk --no-ui --all --filter "android-25,build-tools-25.0.2"
     - echo y | android update sdk --no-ui --all --filter "extra-android-m2repository"
     - echo $circle | base64 --decode > ${HOME}/client-secret.json
     - sudo /opt/google-cloud-sdk/bin/gcloud config set project $PROJECT_ID
@@ -12,6 +12,6 @@ ependencies:
 test:
   override:
     - ./gradlew assembleDebug assembleAndroidTest
-    - echo "y" | sudo /opt/google-cloud-sdk/bin/gcloud beta test android run test_settings.yml:instrumentation-test
+    - echo "y" | sudo /opt/google-cloud-sdk/bin/gcloud beta test android run  --type robo --app app/build/outputs/apk/app-debug.apk --device-ids Nexus6 --os-version-ids 19,21 --locales en --orientations portrait,landscape
   post:
     - sudo /opt/google-cloud-sdk/bin/gsutil -m cp -r -U `sudo /opt/google-cloud-sdk/bin/gsutil ls gs://${BUCKET_NAME} | tail -1` $CIRCLE_ARTIFACTS/ | true
