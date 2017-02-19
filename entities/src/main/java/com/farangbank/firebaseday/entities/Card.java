@@ -1,63 +1,24 @@
 package com.farangbank.firebaseday.entities;
 
+import com.google.auto.value.AutoValue;
 
-public class Card {
+@AutoValue
+public abstract class Card {
 
-    private long id;
-    private long accountId;
-    private double balance;
-    private double limit;
-    private Currency currency;
-    private boolean active;
+    public abstract long id();
 
-    public Card() {
-    }
+    public abstract long accountId();
 
-    public long getId() {
-        return id;
-    }
+    public abstract double balance();
 
-    public void setId(long id) {
-        this.id = id;
-    }
+    public abstract double limit();
 
-    public long getAccountId() {
-        return accountId;
-    }
+    public abstract Currency currency();
 
-    public void setAccountId(long accountId) {
-        this.accountId = accountId;
-    }
+    public abstract boolean active();
 
-    public double getBalance() {
-        return balance;
-    }
-
-    public void setBalance(double balance) {
-        this.balance = balance;
-    }
-
-    public double getLimit() {
-        return limit;
-    }
-
-    public void setLimit(double limit) {
-        this.limit = limit;
-    }
-
-    public Currency getCurrency() {
-        return currency;
-    }
-
-    public void setCurrency(Currency currency) {
-        this.currency = currency;
-    }
-
-    public boolean isActive() {
-        return active;
-    }
-
-    public void setActive(boolean active) {
-        this.active = active;
-    }
+    public static Card createCard(long id, long accountId, double balance, double limit,
+                                  Currency currency, boolean active) {
+        return new AutoValue_Card(id, accountId, balance, limit, currency, active);
+     }
 }

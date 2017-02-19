@@ -1,15 +1,27 @@
 package com.farangbank.firebaseday.entities;
 
-/**
- * Created by inaki on 05/02/2017.
- */
+import com.google.auto.value.AutoValue;
 
-public class Transfer {
-    private Account origin;
-    private String destinationAccount;
-    private String destinationBank;
-    private double amount;
-    private String concept;
-    private Currency currency;
+@AutoValue
+public abstract class Transfer {
+    public abstract Account origin();
+
+    public abstract String destinationAccount();
+
+    public abstract String destinationBank();
+
+    public abstract double amount();
+
+    public abstract String concept();
+
+    public abstract Currency currency();
+
+    public static Transfer createTransfer(Account account, String destinationAccount,
+                                          String destinationBank, double amount, String concept,
+                                          Currency currency) {
+        return new AutoValue_Transfer(account, destinationAccount, destinationBank, amount, concept,
+                currency);
+
+    }
 }
 
