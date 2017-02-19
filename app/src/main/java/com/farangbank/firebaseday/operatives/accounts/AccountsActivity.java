@@ -1,12 +1,11 @@
 package com.farangbank.firebaseday.operatives.accounts;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
 
+import com.farangbank.firebaseday.BaseActivity;
 import com.farangbank.firebaseday.R;
 import com.farangbank.firebaseday.entities.Account;
 
@@ -15,12 +14,10 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class AccountsActivity extends AppCompatActivity implements AccountsView {
+public class AccountsActivity extends BaseActivity implements AccountsView {
 
     @BindView(R.id.accounts_activity_recycler)
     RecyclerView recyclerView;
-    @BindView(R.id.toolbar)
-    Toolbar toolbar;
 
     private AccountsAdapter accountsAdapter;
 
@@ -29,7 +26,7 @@ public class AccountsActivity extends AppCompatActivity implements AccountsView 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.accounts_activity);
         ButterKnife.bind(this);
-        setSupportActionBar(toolbar);
+        initDrawer();
         initAdapter();
         initPresenter();
     }
@@ -47,7 +44,7 @@ public class AccountsActivity extends AppCompatActivity implements AccountsView 
 
     @Override
     public void showError(Throwable error) {
-       // Snackbar.make(this, "Replace with your own action", Snackbar.LENGTH_LONG).show();
+        // Snackbar.make(this, "Replace with your own action", Snackbar.LENGTH_LONG).show();
     }
 
     private void initAdapter() {
