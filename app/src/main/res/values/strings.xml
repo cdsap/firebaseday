@@ -6,4 +6,6 @@
 
     <string name="action_settings">Settings</string>
     <string name="operatives_account">Accounts</string>
+    <string name="operatives_cards">Cards</string>
+
 </resources>

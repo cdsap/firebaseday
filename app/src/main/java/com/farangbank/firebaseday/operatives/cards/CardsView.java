@@ -5,7 +5,7 @@ import com.farangbank.firebaseday.entities.Card;
 import java.util.List;
 
 public interface CardsView {
-    void loadCards(List<Card> cardlList);
+    void loadCards(List<Card> cardList);
 
     void showError(Throwable error);
 }

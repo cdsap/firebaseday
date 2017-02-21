@@ -4,9 +4,13 @@ buildscript {
         maven {
             url "https://plugins.gradle.org/m2/"
         }
+        flatDir {
+            dirs '../aars'
+        }
+
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.2.2'
+        classpath 'com.android.tools.build:gradle:2.2.3'
         classpath "net.ltgt.gradle:gradle-apt-plugin:0.9"
         classpath 'me.tatarka:gradle-retrolambda:3.2.0'
     }
@@ -15,6 +19,9 @@ buildscript {
 allprojects {
     repositories {
         jcenter()
+        flatDir {
+            dirs '../aars'
+        }
     }
 }
 

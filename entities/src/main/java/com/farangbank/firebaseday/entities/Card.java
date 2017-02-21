@@ -17,8 +17,10 @@ public abstract class Card {
 
     public abstract boolean active();
 
+    public abstract String name();
+
     public static Card createCard(long id, long accountId, double balance, double limit,
-                                  Currency currency, boolean active) {
-        return new AutoValue_Card(id, accountId, balance, limit, currency, active);
+                                  Currency currency, boolean active, String name) {
+        return new AutoValue_Card(id, accountId, balance, limit, currency, active, name);
      }
 }
