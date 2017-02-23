@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">ธนาคารฝรั่ง</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">การตั้งค่า</string>
+    <string name="operatives_account">บัญชี</string>
+    <string name="operatives_cards">Cards</string>
+    <string name="operative_transfers">บริการรถรับส่ง</string>
+    <string name="contact">ติดต่อ</string>
+</resources>

@@ -7,5 +7,7 @@
     <string name="action_settings">Settings</string>
     <string name="operatives_account">Accounts</string>
     <string name="operatives_cards">Cards</string>
+    <string name="operative_transfers">Transfers</string>
+    <string name="contact">Contact</string>
 
 </resources>
