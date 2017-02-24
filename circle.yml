@@ -12,6 +12,6 @@ dependencies:
 test:
   override:
     - ./gradlew assembleDebug assembleAndroidTest
-    - echo "y" | sudo /opt/google-cloud-sdk/bin/gcloud beta test android run  --type robo --app app/build/outputs/apk/app-debug.apk --device-ids Nexus6 --os-version-ids 19,21 --locales en,th --orientations portrait,landscape
+    - echo "y" | sudo /opt/google-cloud-sdk/bin/gcloud beta test android run  --type robo --app app/build/outputs/apk/app-debug.apk --device-ids Nexus5 --os-version-ids 19,21,22 --locales en,th --orientations portrait,landscape
   post:
     - sudo /opt/google-cloud-sdk/bin/gsutil -m cp -r -U `sudo /opt/google-cloud-sdk/bin/gsutil ls gs://${BUCKET_NAME} | tail -1` $CIRCLE_ARTIFACTS/ | true
