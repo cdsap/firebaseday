@@ -1,6 +1,7 @@
 package com.farangbank.firebaseday.operatives.cards;
 
 import android.os.Bundle;
+import android.support.v4.widget.DrawerLayout;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -19,6 +20,8 @@ public class CardsActivity extends BaseActivity implements CardsView {
 
     @BindView(R.id.cards_activity_recycler)
     RecyclerView recyclerView;
+    @BindView(R.id.drawer_layout)
+    DrawerLayout drawerLayout;
 
     private CardsAdapter cardsAdapter;
 
@@ -45,7 +48,7 @@ public class CardsActivity extends BaseActivity implements CardsView {
 
     @Override
     public void showError(Throwable error) {
-        // Snackbar.make(this, "Replace with your own action", Snackbar.LENGTH_LONG).show();
+
     }
 
     private void initAdapter() {

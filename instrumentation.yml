@@ -1,0 +1,9 @@
+
+instrumentation:
+  type: instrumentation
+  app: app/build/outputs/apk/app-debug.apk
+  test: app/build/outputs/apk/app-debug-androidTest.apk
+  device-ids: Nexus5
+  os-version-ids: 21
+  locales: en, th
+  orientations: portrait

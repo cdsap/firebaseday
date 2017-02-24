@@ -17,7 +17,7 @@
             tools:text="Account name" />
 
         <TextView
-            android:id="@+id/account_type"
+            android:id="@+id/card_currency"
             style="@style/Item.Type"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

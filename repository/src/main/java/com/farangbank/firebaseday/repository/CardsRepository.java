@@ -14,7 +14,6 @@ public class CardsRepository {
     public CardsRepository() {
     }
 
-
     public Observable<List<Card>> getCards() {
         return Observable.just(getMockCards());
     }
