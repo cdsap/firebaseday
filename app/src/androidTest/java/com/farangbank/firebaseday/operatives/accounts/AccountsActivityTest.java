@@ -36,7 +36,6 @@ public class AccountsActivityTest {
                         isDisplayed()));
         appCompatImageButton.perform(click());
         ScreenShotter.takeScreenshot("activity_screen", mActivityTestRule.getActivity());
-
     }
 
 }

@@ -46,7 +46,6 @@ public class AccountsActivityTest2 {
         ScreenShotter.takeScreenshot("activity_screen", mActivityTestRule.getActivity());
         appCompatCheckedTextView.perform(click());
         ScreenShotter.takeScreenshot("activity_screen2", mActivityTestRule.getActivity());
-
     }
 
 }
